@@ -6,15 +6,8 @@ using System.Threading.Tasks;
 
 namespace _8_PuzzleSolver
 {
-    public class Heuristics <T>
+    public class Heuristics<T>
     {
-        public static double Manhattan(Point start, Point end)
-        {
-            float dx = Math.Abs(start.X - end.X);
-            float dy = Math.Abs(start.Y - end.Y);
-            return 1 * (dx + dy);
-        }
-
         public static double PiecesOutOfPlace(GameState<T> puzzle)
         {
             double piecesOutOfPlace = 0;
@@ -25,9 +18,7 @@ namespace _8_PuzzleSolver
                 for (int j = 0; j < 3; j++)
                 {
                     if (puzzle.PuzzlePieces[i, j] != solvedPuzzle[i, j])
-                    {
-                        piecesOutOfPlace++;
-                    }
+                    { piecesOutOfPlace++; }
                 }
             }
 

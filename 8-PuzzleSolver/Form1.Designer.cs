@@ -189,8 +189,9 @@
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Form1";
-            Text = "Form1";
+            Text = "8-Puzzle";
             Load += Form1_Load;
             ResumeLayout(false);
         }

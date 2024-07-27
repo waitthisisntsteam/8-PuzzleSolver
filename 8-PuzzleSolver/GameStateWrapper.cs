@@ -13,12 +13,9 @@ namespace _8_PuzzleSolver
         public double DistanceFromStart;
         public double FinalDistance;
 
+        public GameStateWrapper(GameState<T> gameState, double distanceFromStart, double finaldistance)
+       => (GameState, DistanceFromStart, FinalDistance) = (gameState, distanceFromStart, finaldistance);
         public GameStateWrapper(GameState<T> gameState, GameStateWrapper<T> founderGameState, double distanceFromStart, double finaldistance)
-        {
-            GameState = gameState;
-            FounderGameState = founderGameState;
-            DistanceFromStart = distanceFromStart;
-            FinalDistance = finaldistance;
-        }
+        => (GameState, FounderGameState, DistanceFromStart, FinalDistance) = (gameState, founderGameState, distanceFromStart, finaldistance);
     }
 }
